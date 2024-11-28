@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>線上購物</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <button class="menu">&#9776;</button>
+    <h1>線上購物</h1>
+    <nav>
+    <ul>
+        <li><a href="us.html">關於我們</a></li>
+        <li><a href="login.html">會員專區</a></li>                
+    </ul>
+    </nav>  
+    </header>   
+    <main>
+    <section class="news">
+        <h2>冬天要到了，不知道怎麼搭配嗎？</h2>
+        <p>"放心選購，有各種不同的衣服！"</p>
+        <p><a href="more.html" id="learn-more">瞭解更多</a></p>
+    </section>
+        
+    <section class="slogan">
+        <blockquote>" 便宜卻有質感，<br>CP值高。 "</blockquote>
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            $('#learn-more').click(function (event) {
+                event.preventDefault(); // 防止默認跳轉行為
+                $('html, body').animate({
+                    scrollTop: $('.slogan').offset().top // 滾動到 .slogan 的位置
+                }, 800); // 動畫持續 800 毫秒
+            });
+        });
+    </script>    
+    <section class="shop">
+    <img src="images/shop.jpg" alt="線上平台">
+    <div class="info">
+    <h2>快往下滑，來挑選衣服吧！</h2>
+    <p>有各種不同的款式<br>即日辦會員好友可獲得折價卷！</p>
+    </div>
+    </section>
+    <section class="product">
+        <div>
+            <img src="images/p1.png" alt="上衣">
+            <h3>上衣</h3>
+            <p>可以填介紹<br>可以填介紹</p>
+        </div>
+        <div>
+            <img src="images/p2.png" alt="褲子">
+            <h3>褲子</h3>
+            <p>可以填介紹或是選購鈕<br>可以填介紹</p>
+        </div>
+        <div>
+            <img src="images/p3.png" alt="裙子">
+            <h3>裙子</h3>
+            <p>可以填介紹<br>可以填介紹</p>
+        </div>
+        <div>
+            <img src="images/p4.png" alt="帽子">
+            <h3>帽子</h3>
+            <p>可以填介紹<br>可以填介紹</p>
+        </div>
+        <div>
+            <img src="images/p5.png" alt="飾品">
+            <h3>飾品</h3>
+            <p>可以填介紹<br>可以填介紹</p>
+        </div>
+    </section>
+    <section class="newsletter">
+        <p>歡迎加入會員，可不定期收到限定優惠喔！</p>
+        <form>
+            <input type="email" placeholder="請輸入您的 Email" required>
+            <button type="submit">送出</button>
+        </form>
+    </section>
+    </main>
+    <footer>
+        <p>Team 13 © 2024 線上購物 All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
