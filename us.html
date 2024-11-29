@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第十三組介紹</title>
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- 自訂 CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b1d1ed;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #6092ff;
+            font-size: 3em;
+            text-shadow: 2px 2px 5px #aaa;
+            margin-top: 50px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.5em;
+            color: #333;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        /* 淺藍色按鈕樣式 */
+        .btn {
+            display: block;
+            width: 200px;
+            margin: 50px auto;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: #fcffde; /* 淺藍色 */
+            color: rgb(0, 0, 0);
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #00BFFF; /* 更深的藍色 */
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* 特效 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>我們是第十三組</h1>
+    <p>大家好，我們是第十三組<br>我們製作了一個線上選購平台<br>歡迎大家來買東西</p>
+
+    <!-- 返回按鈕 -->
+    <a href="index.html" class="btn" id="back-to-home">回到主畫面</a>
+
+    <!-- jQuery 代碼 -->
+    <script>
+        $(document).ready(function () {
+            // 點擊按鈕時顯示提示訊息，並跳轉回主畫面
+            $('#back-to-home').click(function (event) {
+                alert("即將返回主畫面！");
+            });
+        });
+    </script>
+</body>
+</html>
