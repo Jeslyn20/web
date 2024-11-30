@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeButton = document.querySelector(".close");
     const totalAmount = document.getElementById("totalAmount"); // 總金額顯示區域
     const basePrices = [580, 990, 720, 350, 420]; // 各商品單價
+    const cartItems = document.querySelector(".listCart"); // 購物車商品區域
 
     // 綁定按鈕事件 (包括動態新增商品)
     function bindDynamicButtons() {
@@ -55,15 +56,39 @@ document.addEventListener("DOMContentLoaded", () => {
         totalAmount.textContent = `NT$${total}`;
     }
 
+    // 動態新增商品到購物車
+    function addProductToCart(name, price, image) {
+        const productHTML = `
+            <div class="item">
+                <img src="${image}" alt="${name}">
+                <div class="details">
+                    <div class="name">${name}</div>
+                    <div class="unitPrice">單價：NT$${price}</div>
+                    <div class="quantity">
+                        <button class="minus">-</button>
+                        <span class="qty">1</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <div class="totalPrice">小計：NT$${price}</div>
+                </div>
+            </div>
+        `;
+        cartItems.insertAdjacentHTML("beforeend", productHTML); // 插入新商品到購物車
+
+        // 綁定新增商品的按鈕事件
+        bindDynamicButtons();
+    }
+
     // 初始化功能
     closeButton.addEventListener("click", () => {
         cartTab.style.display = "none"; // 隱藏購物車
     });
 
-    // 綁定現有商品的按鈕功能
-    bindDynamicButtons();
+    // 假設這是您新增商品的方式
+    // 示例：新增一個商品
+    addProductToCart("迷彩運動風上衣", 580, "images/p1.png");
+    addProductToCart("低腰闊腿褲", 990, "images/p2.png");
 
     // 初始化總金額
     updateTotalAmount();
 });
-
