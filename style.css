@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Zen+Maru+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Protest+Revolution&display=swap');
 body{
-    font-family: "Protest Revolution", sans-serif;
+    font-family: "LXGW WenKai TC", cursive;
+    font-family: "Protest Revolution", serif;
     margin: 0;
 }
 header {
