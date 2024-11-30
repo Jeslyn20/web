@@ -1,64 +1,82 @@
+/* 匯入字型 */
 @import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Protest+Revolution&display=swap');
-body{
-    font-family: "LXGW WenKai TC", cursive;
-    font-family: "Protest Revolution", serif;
+
+/* 設定 body 的字型 */
+body {
+    font-family: "LXGW WenKai TC", "Protest Revolution", cursive;
     margin: 0;
 }
-.container{
-  wigth: 900px;
-  max-width: 90vw;
-  margan: auto;
-  text-align: center;
-  padding: 10px;
+
+/* 設定容器寬度和排版 */
+.container {
+    width: 900px; 
+    max-width: 90vw;
+    margin: auto; 
+    text-align: center;
+    padding: 10px;
 }
-svg{
-  width: 30px;
+
+/* SVG 圖示的寬度 */
+svg {
+    width: 30px;
 }
-header{
-  display: flex;
-  align-item: center;
-  justify-content: space-between;
-  padding: 2-px 0;
+
+/* 設定 header 的樣式 */
+header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 2px 0; 
 }
-header .icon-cart{
-  position: relative;
+
+/* 購物車圖示的樣式 */
+header .icon-cart {
+    position: relative;
 }
-header .icon-cart span{
-  display: flex;
-  wigth: 30px;
-  height: 30px;
-  background-color: red;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  right: -20px;
+
+/* 設定購物車數量圓圈的樣式 */
+header .icon-cart span {
+    display: flex;
+    width: 30px; 
+    height: 30px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -20px;
 }
-.listProduct .item img{
-    width: 90%;
-    filter: drop-shadow(0 50px 20px #FFC0CB);
-}
-.listProduct{
+
+/* 產品列表的樣式 */
+.listProduct {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
-.listProduct .item{
-    backgroung-color: #2794b8
-    padding:20px;
+
+/* 每個產品項目的樣式 */
+.listProduct .item {
+    background-color: #2794b8; 
+    padding: 20px;
     border-radius: 20px;
 }
-.listProduct .item h2{
+
+/* 產品名稱的樣式 */
+.listProduct .item h2 {
     font-weight: 500;
     font-size: large;
 }
-.listProduct .item .price{
+
+/* 產品價格的樣式 */
+.listProduct .item .price {
     letter-spacing: 7px;
     font-size: small;
 }
-.listProduct .item button{
+
+/* 按鈕的樣式 */
+.listProduct .item button {
     background-color: rgba(38, 38, 250, 0.8);
     color: #eee;
     padding: 5px 10px;
@@ -66,4 +84,8 @@ header .icon-cart span{
     margin-top: 10px;
     border: none;
     cursor: pointer;
+}
+
+.listProduct .item button:hover {
+    background-color: rgba(38, 38, 250, 1);
 }
