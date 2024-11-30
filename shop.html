@@ -44,6 +44,7 @@
                         <button class="viewMore" data-name="低腰闊腿褲" data-price="799" data-image="images/p2.png">查看更多</button>
                     </div>
                 </div>
+                <!-- 新增商品 -->
                 <div class="item">
                     <img src="images/p3.png" alt="酷帥黑色冷帽">
                     <div class="details">
@@ -100,22 +101,6 @@
             <a href="checkout.html"><button class="checkOut">CHECK OUT</button></a>
         </div>
     </div>
-
     <script src="cart.js"></script>
-
-    <script>
-        // 當點擊 "查看更多" 按鈕時，將商品資料傳遞至另一頁
-        document.querySelectorAll('.viewMore').forEach(button => {
-            button.addEventListener('click', function() {
-                const productName = this.getAttribute('data-name');
-                const productPrice = this.getAttribute('data-price');
-                const productImage = this.getAttribute('data-image');
-
-                // 在這裡我們可以根據需求跳轉至詳細頁，並且將商品資料傳遞給該頁面
-                window.location.href = `productDetails.html?name=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)}&image=${encodeURIComponent(productImage)}`;
-            });
-        });
-    </script>
 </body>
 </html>
-
