@@ -1,12 +1,45 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&family=Yuji+Syuku&family=ZCOOL+XiaoWei&display=swap');
+body{
+    font-family: "Potta One", system-ui;
+    margin: 0;
     padding:0;
-    margin:0;
+
+}    
+.container{
+    width: 900px;
+    max_width: 90vw;
+    margin: auto;
+    text_align: center;
+    padding-top: 10px;
+}    
+svd{
+    width: 30px;
 }
 header {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 20px 0;
     background-color:rgba(38, 38, 250, 0.8);
     height:80px;
     width:100%;
     position:fixed;    
+}
+header .icon-cart{
+    position: relative;
+}
+header .icon-cart span{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    justify-content: center;
+    align-items:center;
+    color: #fff;
+    border-radius: 50%;
+    bosition: absolute;
+    top: 50%;
+    right: -20px;
 }
 h1 {
     color:rgb(125, 237, 135);
