@@ -1,9 +1,13 @@
+/* 全域樣式 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9; /* 柔和背景色 */
+    color: #333; /* 預設字體顏色 */
 }
+
+/* 容器樣式 */
 .container {
     width: 90%;
     max-width: 800px;
@@ -11,31 +15,42 @@ body {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 增加陰影提升視覺效果 */
 }
+
+/* 標頭樣式 */
 header {
     text-align: center;
     margin-bottom: 20px;
 }
 header .title {
-    font-size: 24px;
+    font-size: 26px; /* 更大字體 */
     font-weight: bold;
+    color: #555; /* 淡化標題字體顏色 */
 }
+
+/* 購物車內容樣式 */
 .cartTab {
     margin-bottom: 20px;
 }
 .cartTab h1 {
     font-size: 22px;
     margin-bottom: 10px;
+    color: #444;
+    text-align: center; /* 標題置中 */
 }
 .listCart {
     border-top: 1px solid #ddd;
-    padding-top: 10px;
+    padding-top: 15px;
 }
+
+/* 單項商品樣式 */
 .item {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* 增加間距 */
+    border-bottom: 1px solid #eee; /* 分隔商品項目 */
+    padding-bottom: 15px;
 }
 .item img {
     width: 80px;
@@ -43,6 +58,7 @@ header .title {
     object-fit: cover;
     border-radius: 5px;
     margin-right: 15px;
+    border: 1px solid #ddd; /* 圖片邊框 */
 }
 .item .details {
     flex: 1;
@@ -50,15 +66,16 @@ header .title {
 .item .details .name {
     font-size: 18px;
     font-weight: bold;
+    margin-bottom: 5px; /* 增加字與價格的間距 */
 }
 .item .details .totalPrice {
     font-size: 16px;
     color: #666;
-    margin-top: 5px;
 }
 .quantity {
     display: flex;
     align-items: center;
+    margin-top: 10px; /* 讓數量控制與內容稍微分隔 */
 }
 .quantity button {
     width: 30px;
@@ -69,17 +86,21 @@ header .title {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.2s ease; /* 增加按鈕的過渡效果 */
 }
 .quantity span {
-    margin: 0 10px;
+    margin: 0 15px; /* 調整數字與按鈕的間距 */
     font-size: 16px;
 }
 .quantity button:hover {
     background-color: #bbb;
 }
+
+/* 按鈕區域 */
 .btn {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px; /* 增加與商品列表的間距 */
 }
 .btn button {
     padding: 10px 20px;
@@ -87,9 +108,14 @@ header .title {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 .btn .close {
-    background-color: #ccc;
+    background-color: #e0e0e0;
+    color: #333;
+}
+.btn .close:hover {
+    background-color: #d6d6d6;
 }
 .btn .checkOut {
     background-color: #28a745;
@@ -97,4 +123,45 @@ header .title {
 }
 .btn .checkOut:hover {
     background-color: #218838;
+}
+
+/* 總金額區域樣式 */
+.total {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa; /* 提供淺灰色背景 */
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 柔和陰影 */
+}
+.total h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #444;
+}
+.total p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745; /* 使用與結帳按鈕一致的顏色 */
+}
+
+/* 響應式設計 */
+@media (max-width: 600px) {
+    .item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .item img {
+        margin-bottom: 10px;
+    }
+    .btn {
+        flex-direction: column;
+    }
+    .btn button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .btn button:last-child {
+        margin-bottom: 0;
+    }
 }
