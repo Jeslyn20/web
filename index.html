@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,72 +13,11 @@
     <nav>
     <ul>
         <li><a href="us.html">關於我們</a></li>
-        <li><a href="login.html">會員專區</a></li>  
-        <div class="icon-cart">
-            <div class="icon-cart">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
-                </svg>
-                <span>0</span>
-            </div>
-        </nav>
-    </header>
-
-    <!-- 側邊欄 -->
-    <div class="cart-panel" id="cart-panel">
-        <div class="close-btn" id="close-panel">&times;</div>
-        <h2>購物車</h2>
-        <div class="cart-items">
-            <!-- 假設一些購物車項目 -->
-            <div class="cart-item">
-                <span>商品 A</span><span class="price">NT$ 500</span>
-            </div>
-            <div class="cart-item">
-                <span>商品 B</span><span class="price">NT$ 300</span>
-            </div>
-            <div class="cart-item">
-                <span>商品 C</span><span class="price">NT$ 700</span>
-            </div>
-        </div>
-        <div class="cart-total">
-            <strong>總計: NT$ 1500</strong>
-        </div>
-    </div>
-
-    <script>
-        $(document).ready(function() {
-            // 點擊購物車圖示時顯示側邊欄
-            $('.icon-cart').click(function() {
-                $('#cart-panel').toggleClass('active');
-            });
-
-            // 點擊關閉按鈕時隱藏側邊欄
-            $('#close-panel').click(function() {
-                $('#cart-panel').removeClass('active');
-            });
-        });
-    </script>
+        <li><a href="login.html">會員專區</a></li>                
+    </ul>
+    </nav>  
+    </header>   
     <main>
-    <section class="news">
-        <h2>冬天要到了，不知道怎麼搭配嗎？</h2>
-        <p>"放心選購，有各種不同的衣服！"</p>
-        <p><a href="more.html" id="learn-more">瞭解更多</a></p>
-    </section>
-        
-    <section class="slogan">
-        <blockquote>" 便宜卻有質感，<br>CP值高。 "</blockquote>
-    </section>
-
-    <script>
-        $(document).ready(function () {
-            $('#learn-more').click(function (event) {
-                event.preventDefault(); // 防止默認跳轉行為
-                $('html, body').animate({
-                    scrollTop: $('.slogan').offset().top // 滾動到 .slogan 的位置
-                }, 800); // 動畫持續 800 毫秒
-            });
-        });
-    </script>    
     <section class="shop">
     <img src="images/shop.jpg" alt="線上平台">
     <div class="info">
