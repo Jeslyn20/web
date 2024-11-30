@@ -11,6 +11,19 @@ header {
     width:100%;
     position:fixed;    
 }
+.menu {
+    font-size: 24px; 
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #fff; 
+    padding: 10px;
+}
+
+.menu:hover {
+    color: #555; /* 增加懸停效果 */
+}
+
 h1 {
     color:rgb(125, 237, 135);
     position:absolute;
