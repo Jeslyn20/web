@@ -86,6 +86,6 @@ header .icon-cart span {
     cursor: pointer;
 }
 
-.listProduct .item button:hover {
-    background-color: rgba(38, 38, 250, 1);
+.cartTab .btn .close{
+    background-color: #eee;
 }
