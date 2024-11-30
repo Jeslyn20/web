@@ -1,91 +1,101 @@
-/* 匯入字型 */
-@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Protest+Revolution&display=swap');
-
-/* 設定 body 的字型 */
 body {
-    font-family: "LXGW WenKai TC", "Protest Revolution", cursive;
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
-
-/* 設定容器寬度和排版 */
 .container {
-    width: 900px; 
-    max-width: 90vw;
-    margin: auto; 
-    text-align: center;
-    padding: 10px;
-}
-
-/* SVG 圖示的寬度 */
-svg {
-    width: 30px;
-}
-
-/* 設定 header 的樣式 */
-header {
-    display: flex;
-    align-items: center; 
-    justify-content: space-between;
-    padding: 20px 0; 
-}
-
-/* 購物車圖示的樣式 */
-header .icon-cart {
-    position: relative;
-}
-
-/* 設定購物車數量圓圈的樣式 */
-header .icon-cart span {
-    display: flex;
-    width: 30px; 
-    height: 30px;
-    background-color: pink;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    right: -20px;
-}
-
-/* 產品列表的樣式 */
-.listProduct {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-/* 每個產品項目的樣式 */
-.listProduct .item {
-    background-color: #2794b8; 
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-/* 產品名稱的樣式 */
-.listProduct .item h2 {
-    font-weight: 500;
-    font-size: large;
+header {
+    text-align: center;
+    margin-bottom: 20px;
 }
-
-/* 產品價格的樣式 */
-.listProduct .item .price {
-    letter-spacing: 7px;
-    font-size: small;
+header .title {
+    font-size: 24px;
+    font-weight: bold;
 }
-
-/* 按鈕的樣式 */
-.listProduct .item button {
-    background-color: rgba(38, 38, 250, 0.8);
-    color: #eee;
-    padding: 5px 10px;
-    border-radius: 20px;
-    margin-top: 10px;
+.cartTab {
+    margin-bottom: 20px;
+}
+.cartTab h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.listCart {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+.item .details {
+    flex: 1;
+}
+.item .details .name {
+    font-size: 18px;
+    font-weight: bold;
+}
+.item .details .totalPrice {
+    font-size: 16px;
+    color: #666;
+    margin-top: 5px;
+}
+.quantity {
+    display: flex;
+    align-items: center;
+}
+.quantity button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #ddd;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
-
-.cartTab .btn .close{
-    background-color: #eee;
+.quantity span {
+    margin: 0 10px;
+    font-size: 16px;
 }
+.quantity button:hover {
+    background-color: #bbb;
+}
+.btn {
+    display: flex;
+    justify-content: space-between;
+}
+.btn button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn .close {
+    background-color: #ccc;
+}
+.btn .checkOut {
+    background-color: #28a745;
+    color: #fff;
+}
+.btn .checkOut:hover {
+    background-color: #218838;
+}
+
