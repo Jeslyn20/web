@@ -116,11 +116,20 @@
             // 商品查看更多按鈕 (可自定導向)
             $('.view-more').click(function () {
                 const product = $(this).data('product');
-                alert(`您選擇了：${product}`);
+                const productDetails = {
+                    "迷彩運動風上衣": "這是一款迷彩運動風格的上衣，價格 NT$580。",
+                    "低腰闊腿褲": "這款低腰闊腿褲非常適合街頭風格，價格 NT$799。",
+                    "百褶超迷你短裙": "這款百褶短裙充滿青春感，價格 NT$680。",
+                    "酷帥黑色冷帽": "這款黑色冷帽簡約而時尚，價格 NT$340。",
+                    "街頭風銀色短項鍊": "這款銀色項鍊精緻且具街頭風格，價格 NT$360。"
+                };
+                // 顯示商品詳情
+                alert(productDetails[product]);
                 // 在此處可以設定跳轉至商品詳細頁面的邏輯
-                window.location.href = 'shop.html';
+                // window.location.href = 'shop.html';
             });
         });
     </script>
 </body>
 </html>
+
