@@ -230,3 +230,32 @@ header h1 {
     margin-bottom: 30px;
 }
 }
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* 預設隱藏選單 */
+        flex-direction: column;
+        background-color: #0056b3;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    nav ul.show {
+        display: flex; /* 點擊按鈕後顯示選單 */
+    }
+
+    button.menu {
+        display: block; /* 在手機上顯示漢堡選單 */
+    }
+}
+
+/* 電腦版本 (螢幕寬度大於768px) */
+@media (min-width: 769px) {
+    nav ul {
+        display: flex; /* 始終顯示選單 */
+    }
+    button.menu {
+        display: none; /* 隱藏漢堡選單按鈕 */
+    }
+}
