@@ -23,23 +23,64 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div class="unitPrice">單價：NT$${price}</div>
                         <div class="quantity">
                             <button class="minus">-</button>
-                            <span class="qty">1</span>
+                            <span class="qty">0</span>
                             <button class="plus">+</button>
                         </div>
-                        <div class="totalPrice">小計：NT$${price}</div>
+                        <div class="totalPrice">小計：NT$0</div>
                     </div>
                 </div>
             `;
 
-            // 更新總金額
-            updateTotalAmount();
+            // 綁定增減數量按鈕
+            bindQuantityButtons();
 
             // 顯示購物車頁面
             cartTab.style.display = "block";
+
+            // 初始化總金額
+            updateTotalAmount();
         });
     });
 
-    // 更新總金額
+    // 綁定數量增減按鈕
+    function bindQuantityButtons() {
+        const minusButtons = document.querySelectorAll(".minus");
+        const plusButtons = document.querySelectorAll(".plus");
+        const quantities = document.querySelectorAll(".quantity span");
+        const prices = document.querySelectorAll(".totalPrice");
+
+        // Minus 按鈕功能
+        minusButtons.forEach((btn, index) => {
+            btn.onclick = () => {
+                let quantity = parseInt(quantities[index].textContent);
+                quantity--;  // 減少數量
+
+                if (quantity >= 0) {  // 防止數量小於0
+                    quantities[index].textContent = quantity;
+                    updatePriceAndTotal(index, quantity, prices);
+                }
+            };
+        });
+
+        // Plus 按鈕功能
+        plusButtons.forEach((btn, index) => {
+            btn.onclick = () => {
+                let quantity = parseInt(quantities[index].textContent);
+                quantity++;  // 增加數量
+                quantities[index].textContent = quantity;
+                updatePriceAndTotal(index, quantity, prices);
+            };
+        });
+    }
+
+    // 更新單個商品價格和總金額
+    function updatePriceAndTotal(index, quantity, prices) {
+        const price = basePrices[index];
+        prices[index].textContent = `小計：NT$${price * quantity}`;
+        updateTotalAmount();
+    }
+
+    // 計算並更新購物車總金額
     function updateTotalAmount() {
         const quantities = document.querySelectorAll(".quantity span");
         const prices = document.querySelectorAll(".totalPrice");
