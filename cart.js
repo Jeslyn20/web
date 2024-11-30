@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartTab = document.querySelector(".cartTab");
     const closeButton = document.querySelector(".close");
     const totalAmount = document.getElementById("totalAmount"); // 總金額顯示區域
-    const basePrices = [580, 990, 720, 350, 420]; // 各商品單價
+    const basePrices = [580, 799, 680, 340, 360]; // 各商品單價
     const cartItems = document.querySelector(".listCart"); // 購物車商品區域
 
     // 綁定按鈕事件 (包括動態新增商品)
@@ -87,7 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // 假設這是您新增商品的方式
     // 示例：新增一個商品
     addProductToCart("迷彩運動風上衣", 580, "images/p1.png");
-    addProductToCart("低腰闊腿褲", 990, "images/p2.png");
+    addProductToCart("低腰闊腿褲", 799, "images/p2.png");
+    addProductToCart("百褶超迷你短裙", 680, "images/p3.png");
+    addProductToCart("酷帥黑色冷帽", 340, "images/p4.png");
+    addProductToCart("街頭風銀色短項鍊", 360, "images/p5.png");
+  
 
     // 初始化總金額
     updateTotalAmount();
