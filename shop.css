@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Protest+Revolution&display=swap');
+body{
+    font-family: "LXGW WenKai TC", cursive;
+    font-family: "Protest Revolution", serif;
+    margin: 0;
+}
+.container{
+  wigth: 900px;
+  max-width: 90vw;
+  margan: auto;
+  text-align: center;
+  padding: 10px;
+}
+svg{
+  width: 30px;
+}
+header{
+  display: flex;
+  align-item: center;
+  justify-content: space-between;
+  padding: 2-px 0;
+}
+header .icon-cart{
+  position: relative;
+}
+header .icon-cart span{
+  display: flex;
+  wigth: 30px;
+  height: 30px;
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: -20px;
+}
