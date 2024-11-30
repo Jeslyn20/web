@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品詳細頁</title>
+</head>
+<body>
+    <div class="product-details">
+        <h1 id="productName"></h1>
+        <img id="productImage" src="" alt="Product Image">
+        <p id="productPrice"></p>
+    </div>
+
+    <script>
+        // 從 URL 獲取參數
+        const urlParams = new URLSearchParams(window.location.search);
+        const productName = urlParams.get('name');
+        const productPrice = urlParams.get('price');
+        const productImage = urlParams.get('image');
+
+        // 將參數顯示在頁面上
+        document.getElementById('productName').textContent = productName;
+        document.getElementById('productPrice').textContent = `NT$${productPrice}`;
+        document.getElementById('productImage').src = productImage;
+    </script>
+</body>
+</html>
