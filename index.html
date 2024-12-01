@@ -8,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-   <header>
+    <header>
         <button class="menu">
             <span>&#9776;</span>
         </button>
@@ -31,91 +31,22 @@
         </nav>
     </header>
     <main>
+        <!-- 新增的快速結帳區域 -->
+        <section class="checkout-link">
+            <h2>快速結帳</h2>
+            <p>點擊下方按鈕進入結帳頁面：</p>
+            <a href="checkout.html?total=500" style="padding: 10px; background-color: #f06292; color: white; text-decoration: none; border-radius: 5px;">進入結帳</a>
+        </section>
+
         <section class="news">
             <h2>冬天要到了，不知道怎麼搭配嗎？</h2>
-        <p>"放心選購，有各種不同的衣服！"</p>
-        <p><a id="learn-more" href="#">瞭解更多</a></p>
-    </section>
+            <p>"放心選購，有各種不同的衣服！"</p>
+            <p><a id="learn-more" href="#">瞭解更多</a></p>
+        </section>
 
-    <section class="slogan">
-        <blockquote>" 便宜卻有質感，<br>CP值高。 "</blockquote>
-    </section>
-
-        <script>
-            $(document).ready(function () {
-                $('#learn-more').click(function (event) {
-                    event.preventDefault(); // 阻止默認跳轉行為
-                    $('html, body').animate({
-                        scrollTop: $('.slogan').offset().top // 滾動到 .slogan 區域
-                    }, 800); // 動畫持續時間 800 毫秒
-                });
-            });
-        </script>
-    <section class="shop">
-    <img src="images/shop.jpg" alt="線上平台">
-    <div class="info">
-    <h2>快往下滑，來挑選衣服吧！</h2>
-    <p>有各種不同的款式<br>即日辦會員好友可獲得折價卷！</p>
-    </div>
-    </section>
-    <section class="product">
-        <div>
-            <img src="images/p1.png" alt="上衣">
-            <h3>迷彩運動風上衣</h3>
-            <p>完美結合了時尚與舒適感，讓你在運動時依然保持自信與活力。獨特的迷彩圖案設計，既展現了個性，又充滿了運動氣息，無論是健身房、街頭還是日常穿搭，都能輕鬆駕馭，讓你成為焦點<br>NT$580</p>
-            <button class="查看更多" onclick="window.location.href='shop.html'">
-            查看更多
-        </button>
-        </div>
-
-
-        <div>
-            <img src="images/p2.png" alt="褲子">
-            <h3>低腰闊腿褲</h3>
-            <p>融合時尚與舒適感，為你的日常穿搭增添一抹獨特的風格。其獨特的低腰設計，搭配拖地褲的寬鬆版型，不僅讓你走在潮流前端，還能營造出輕鬆隨性的氛圍。無論是街頭風、休閒風還是度假風，這條褲子都能輕鬆駕馭，讓你在任何場合都能自信展現個性<br>NT$799</p>
-            <button class="查看更多" onclick="window.location.href='shop.html'">
-            查看更多
-            </button>
-        </div>
-
-        <div>
-            <img src="images/p3.png" alt="裙子">
-            <h3>百褶超迷你短裙</h3>
-            <p>極具個性和街頭感的設計，將迷彩風格與百褶元素巧妙結合，打破傳統的裙子設計，帶來不一樣的視覺衝擊。短裙的超迷你版型，輕鬆展現出自信和青春活力，無論是日常穿搭還是週末派對，都能讓你吸引所有目光，展現無可挑剔的時尚感<br>NT$680</p>
-            <button class="查看更多" onclick="window.location.href='shop.html'">
-            查看更多
-            </button>
-        </div>
-
-
-        <div>
-            <img src="images/p4.png" alt="帽子">
-            <h3>酷帥黑色冷帽</h3>
-            <p>以其簡潔的黑色設計搭配立體星星與英文字母刺繡，營造出一種街頭風格與個性並存的魅力。無論是日常休閒搭配還是戶外運動，這頂冷帽都能為你的造型增添獨特的時尚感。立體星星的精緻工藝，與潮流字母的點綴，讓整體設計既簡約又不失亮眼，充滿了青春與活力<br>NT$340</p>
-            <button class="查看更多" onclick="window.location.href='shop.html'">
-            查看更多
-            </button>
-        </div>
-
-        
-        <div>
-            <img src="images/p5.png" alt="飾品">
-            <h3>街頭風銀色短項鍊</h3>
-            <p>無論搭配T恤、連帽衛衣還是皮革夾克，都能完美呈現街頭風格。可搭配一些簡約的衣物，讓項鍊成為焦點，吸引所有目光。如果想要打造更酷的造型，可以將它與黑色皮褲或運動褲搭配，帶出強烈的街頭態度<br>NT$360</p>
-            <button class="查看更多" onclick="window.location.href='shop.html'">
-            查看更多
-            </button>
-        </div>
-
-        
-    </section>
-    <section class="newsletter">
-        <p>歡迎加入會員，可不定期收到限定優惠喔！</p>
-        <form>
-            <input type="email" placeholder="請輸入您的 Email" required>
-            <button type="submit">送出</button>
-        </form>
-    </section>
+        <section class="slogan">
+            <blockquote>"便宜卻有質感，<br>CP值高。"</blockquote>
+        </section>
     </main>
     <footer>
         <p>Team 13 © 2024 線上購物 All Rights Reserved.</p>
