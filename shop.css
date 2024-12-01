@@ -14,6 +14,7 @@ body {
     margin: auto; 
     text-align: center;
     padding-top: 10px;
+    transition: transform .5s;
 }
 
 /* SVG 圖示的寬度 */
@@ -97,6 +98,13 @@ header .icon-cart span {
     inset: 0 -400px 0 auto;
     display: grid;
     grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+}
+body.shoeCart .cartTab{
+    inset: 0 0 0 auto;
+}
+body.showCart .container{
+    transform: translateX(-250px);
 }
 .cartTab h1{
     padding: 20px;
