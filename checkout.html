@@ -94,4 +94,12 @@
         }
 
         // 表單提交處理
-        document.getElementBy
+        document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('結帳成功！');
+            localStorage.removeItem('cart');  // 清空購物車
+            localStorage.removeItem('totalPrice');  // 清空總金額
+        });
+    </script>
+</body>
+</html>
