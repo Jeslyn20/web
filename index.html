@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>線上購物</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
@@ -28,26 +29,26 @@
     </nav>  
     </header>
     <main>
-    <section class="news">
-        <h2>冬天要到了，不知道怎麼搭配嗎？</h2>
+        <section class="news">
+            <h2>冬天要到了，不知道怎麼搭配嗎？</h2>
         <p>"放心選購，有各種不同的衣服！"</p>
-        <p><a href="more.html" id="learn-more">瞭解更多</a></p>
+        <p><a id="learn-more" href="#">瞭解更多</a></p>
     </section>
-        
+
     <section class="slogan">
         <blockquote>" 便宜卻有質感，<br>CP值高。 "</blockquote>
     </section>
 
-    <script>
-        $(document).ready(function () {
-            $('#learn-more').click(function (event) {
-                event.preventDefault(); // 防止默認跳轉行為
-                $('html, body').animate({
-                    scrollTop: $('.slogan').offset().top // 滾動到 .slogan 的位置
-                }, 800); // 動畫持續 800 毫秒
+        <script>
+            $(document).ready(function () {
+                $('#learn-more').click(function (event) {
+                    event.preventDefault(); // 阻止默認跳轉行為
+                    $('html, body').animate({
+                        scrollTop: $('.slogan').offset().top // 滾動到 .slogan 區域
+                    }, 800); // 動畫持續時間 800 毫秒
+                });
             });
-        });
-    </script>    
+        </script>
     <section class="shop">
     <img src="images/shop.jpg" alt="線上平台">
     <div class="info">
