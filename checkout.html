@@ -86,25 +86,12 @@
         </form>
     </div>
     <script>
-        // 從 localStorage 中獲取總金額
-        const totalAmount = localStorage.getItem('totalAmount');
+        // 從 localStorage 讀取總金額並顯示
+        const totalAmount = localStorage.getItem('totalPrice');  // 從 localStorage 取得總金額
 
-        // 更新總金額顯示
         if (totalAmount) {
             document.getElementById('totalAmount').textContent = `NT$ ${totalAmount}`;
         }
 
         // 表單提交處理
-        document.getElementById("checkoutForm").addEventListener("submit", function(e) {
-            e.preventDefault(); // 防止頁面刷新
-            const name = document.getElementById("name").value;
-            const phone = document.getElementById("phone").value;
-            const address = document.getElementById("address").value;
-            const payment = document.getElementById("payment").value;
-
-            // 模擬提交完成
-            alert(`結帳成功！\n\n姓名: ${name}\n電話: ${phone}\n地址: ${address}\n付款方式: ${payment}\n總金額: NT$ ${totalAmount}`);
-        });
-    </script>
-</body>
-</html>
+        document.getElementBy
