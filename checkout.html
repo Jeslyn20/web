@@ -86,14 +86,17 @@
         </form>
     </div>
     <script>
-        // 從 URL 查詢參數中提取總金額
-        const urlParams = new URLSearchParams(window.location.search);
-        const totalAmount = urlParams.get('total');
+        // 假設購物車資料保存在 localStorage 中，格式為 JSON
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        // 計算總金額
+        let totalAmount = 0;
+        cart.forEach(item => {
+            totalAmount += item.price * item.quantity;
+        });
 
-        // 更新總金額的顯示
-        if (totalAmount) {
-            document.getElementById('totalAmount').textContent = `NT$ ${totalAmount}`;
-        }
+        // 更新訂單總金額
+        document.getElementById('totalAmount').textContent = `NT$ ${totalAmount}`;
 
         // 表單提交處理
         document.getElementById("checkoutForm").addEventListener("submit", function(e) {
@@ -109,5 +112,3 @@
     </script>
 </body>
 </html>
-
-
