@@ -84,7 +84,7 @@ header.icon-cart span {
 }
 
 /* 按鈕的樣式 */
-.listProduct .item button {
+.listProduct .item button{
     background-color: #2828FF;
     color: #eee;
     padding: 5px 10px;
@@ -93,7 +93,7 @@ header.icon-cart span {
     border: none;
     cursor: pointer;
 }
-.listProduct .item button :hover {
+.listProduct .item button:hover {
     background-color: #FF95CA; 
     transform: scale(1.1);     
 }
