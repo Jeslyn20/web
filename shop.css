@@ -54,7 +54,7 @@ header.icon-cart span {
 }
 .listProduct .item img{
     width: 90%;
-    filter: drop-shadow(0 -50px 20px #fff)
+    filter: drop-shadow(0 -70px 20px #84C1FF)
 }
 /* 產品列表的樣式 */
 .listProduct {
