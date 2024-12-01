@@ -24,9 +24,9 @@ svg {
 /* 設定 header 的樣式 */
 header {
     display: flex;
-    align-items: center; /* 修正拼寫錯誤 */
+    align-items: center; 
     justify-content: space-between;
-    padding: 2px 0; /* 修正錯誤的 padding */
+    padding: 20px 0; 
 }
 
 /* 購物車圖示的樣式 */
@@ -37,7 +37,7 @@ header .icon-cart {
 /* 設定購物車數量圓圈的樣式 */
 header .icon-cart span {
     display: flex;
-    width: 30px; /* 修正拼寫錯誤 */
+    width: 30px; 
     height: 30px;
     background-color: red;
     justify-content: center;
@@ -49,6 +49,10 @@ header .icon-cart span {
     right: -20px;
 }
 
+.listProduct .item img{
+    width: 90%;
+    filter: drop-shadow(0 50px 20px #FFC0CB)
+}
 /* 產品列表的樣式 */
 .listProduct {
     display: grid;
@@ -58,7 +62,7 @@ header .icon-cart span {
 
 /* 每個產品項目的樣式 */
 .listProduct .item {
-    background-color: #2794b8; /* 修正拼寫錯誤 */
+    background-color: #2794b8; 
     padding: 20px;
     border-radius: 20px;
 }
@@ -85,7 +89,31 @@ header .icon-cart span {
     border: none;
     cursor: pointer;
 }
-
-.listProduct .item button:hover {
-    background-color: rgba(38, 38, 250, 1);
+.cartTab{
+    width: 400px;
+    backgroung-color: #353432
+    color: #eee;
+    position: fixed;
+    inset: 0 0 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+}
+.cartTab h1{
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+.cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cartTab .btn button{
+    background-color: #E8BC0E;
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+.cartTab .btn .close{
+    background-color: #eee;
 }
