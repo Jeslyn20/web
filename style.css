@@ -165,7 +165,7 @@ header a:hover {
     line-height: 1.6em;
 }
 
-.product learnMore {
+.product button {
     background-color: #4CAF50; 
     color: white;             
     font-size: 16px;          
@@ -175,7 +175,7 @@ header a:hover {
     cursor: pointer;          
     transition: transform 0.3s ease; 
 }
-.product learnMore:hover {
+.product button:hover {
     background-color: #45a049; 
     transform: scale(1.1);     
 }
