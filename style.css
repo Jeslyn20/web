@@ -166,7 +166,7 @@ header a:hover {
 }
 
 .product button {
-    background-color: #FF95CA; 
+    background-color: #2828FF; 
     color: #eee;             
     font-size: 16px;          
     padding: 10px 20px;       
@@ -176,7 +176,7 @@ header a:hover {
     transition: transform 0.3s ease; 
 }
 .product button:hover {
-    background-color: #45a049; 
+    background-color: #FF95CA; 
     transform: scale(1.1);     
 }
 
