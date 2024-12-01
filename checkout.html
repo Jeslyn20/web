@@ -59,6 +59,10 @@
     <div class="form-container">
         <form id="checkoutForm">
             <div class="form-group">
+                <label>訂單總金額</label>
+                <p id="totalAmount" style="font-size: 18px; font-weight: bold; color: #e91e63;">NT$ 0</p>
+            </div>
+            <div class="form-group">
                 <label for="name">姓名</label>
                 <input type="text" id="name" name="name" placeholder="請輸入姓名" required>
             </div>
@@ -82,6 +86,15 @@
         </form>
     </div>
     <script>
+        // 從 URL 查詢參數中提取總金額
+        const urlParams = new URLSearchParams(window.location.search);
+        const totalAmount = urlParams.get('total');
+
+        // 更新總金額的顯示
+        if (totalAmount) {
+            document.getElementById('totalAmount').textContent = `NT$ ${totalAmount}`;
+        }
+
         // 表單提交處理
         document.getElementById("checkoutForm").addEventListener("submit", function(e) {
             e.preventDefault(); // 防止頁面刷新
@@ -91,10 +104,9 @@
             const payment = document.getElementById("payment").value;
 
             // 模擬提交完成
-            alert(`結帳成功！\n\n姓名: ${name}\n電話: ${phone}\n地址: ${address}\n付款方式: ${payment}`);
-            
-            // 可在這裡加入傳送到伺服器的邏輯
+            alert(`結帳成功！\n\n姓名: ${name}\n電話: ${phone}\n地址: ${address}\n付款方式: ${payment}\n總金額: NT$ ${totalAmount}`);
         });
     </script>
 </body>
 </html>
+
