@@ -135,7 +135,7 @@ header a:hover {
 
 .info p {
     text-align: center;
-    font-family: Protest Revolution;
+    font-family: Protest Revolution !important;
     line-height: 2em;
 }
 
@@ -164,6 +164,8 @@ header a:hover {
 .product p {
     font-size: 14px;
     line-height: 1.6em;
+    font-family: Protest Revolution !important;
+
 }
 
 .product button {
