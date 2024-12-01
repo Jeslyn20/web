@@ -96,7 +96,7 @@
 
         // 表單提交處理
         document.getElementById('checkoutForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+            e.preventDefault();  // 防止表單自動提交並刷新頁面
 
             // 收集表單數據
             const name = document.getElementById('name').value;
@@ -122,7 +122,7 @@
                 },
                 body: JSON.stringify(orderData),  // 轉換為 JSON 字符串
             })
-            .then(response => response.json())
+            .then(response => response.json())  // 解析伺服器回應的 JSON
             .then(data => {
                 // 顯示結帳成功訊息
                 alert('結帳成功!感謝您的購買');
