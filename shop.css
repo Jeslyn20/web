@@ -93,6 +93,10 @@ header.icon-cart span {
     border: none;
     cursor: pointer;
 }
+.listProduct .item button :hover {
+    background-color: #FF95CA; 
+    transform: scale(1.1);     
+}
 .cartTab{
     width: 400px;
     background-color: #81C0C0;
