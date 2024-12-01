@@ -138,22 +138,6 @@ header a:hover {
     line-height: 2em;
 }
 
-.info button {
-    background-color: #4CAF50; 
-    color: white;             
-    font-size: 16px;          
-    padding: 10px 20px;       
-    border: none;             
-    border-radius: 5px;       
-    cursor: pointer;          
-    transition: transform 0.3s ease; 
-}
-
-.info button:hover {
-    background-color: #45a049; 
-    transform: scale(1.1);     
-}
-
 .product {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -179,6 +163,21 @@ header a:hover {
 .product p {
     font-size: 14px;
     line-height: 1.6em;
+}
+
+.product button {
+    background-color: #4CAF50; 
+    color: white;             
+    font-size: 16px;          
+    padding: 10px 20px;       
+    border: none;             
+    border-radius: 5px;       
+    cursor: pointer;          
+    transition: transform 0.3s ease; 
+}
+.product button:hover {
+    background-color: #45a049; 
+    transform: scale(1.1);     
 }
 
 .newsletter {
