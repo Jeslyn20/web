@@ -138,15 +138,22 @@ header a:hover {
     line-height: 2em;
 }
 
-.info button {
-    background-color: #FF95CA;
-    color: #eee;
-    padding: 5px 10px;
-    border-radius: 20px;
-    margin-top: 10px;
-    border: none;
-    cursor: pointer;
+button.查看更多 {
+    background-color: #4CAF50; /* 綠色背景 */
+    color: white;             /* 白色文字 */
+    font-size: 16px;          /* 調整文字大小 */
+    padding: 10px 20px;       /* 內距 */
+    border: none;             /* 去除邊框 */
+    border-radius: 5px;       /* 圓角效果 */
+    cursor: pointer;          /* 鼠標手勢 */
+    transition: transform 0.3s ease; /* 增加點擊特效 */
 }
+
+button.查看更多:hover {
+    background-color: #45a049; /* 滑鼠移上去時的顏色 */
+    transform: scale(1.1);     /* 滑鼠移上時放大效果 */
+}
+
 .product {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
