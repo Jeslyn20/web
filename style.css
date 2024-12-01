@@ -138,6 +138,15 @@ header a:hover {
     line-height: 2em;
 }
 
+.info .product button {
+    background-color: #FF95CA;
+    color: #eee;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
 .product {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
