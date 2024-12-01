@@ -86,11 +86,10 @@
         </form>
     </div>
     <script>
-        // 從 URL 查詢參數中提取總金額
-        const urlParams = new URLSearchParams(window.location.search);
-        const totalAmount = urlParams.get('total');
+        // 從 localStorage 中獲取總金額
+        const totalAmount = localStorage.getItem('totalAmount');
 
-        // 更新總金額的顯示
+        // 更新總金額顯示
         if (totalAmount) {
             document.getElementById('totalAmount').textContent = `NT$ ${totalAmount}`;
         }
@@ -109,6 +108,3 @@
     </script>
 </body>
 </html>
-
-
-
