@@ -138,20 +138,20 @@ header a:hover {
     line-height: 2em;
 }
 
-button.查看更多 {
-    background-color: #4CAF50; /* 綠色背景 */
-    color: white;             /* 白色文字 */
-    font-size: 16px;          /* 調整文字大小 */
-    padding: 10px 20px;       /* 內距 */
-    border: none;             /* 去除邊框 */
-    border-radius: 5px;       /* 圓角效果 */
-    cursor: pointer;          /* 鼠標手勢 */
-    transition: transform 0.3s ease; /* 增加點擊特效 */
+.info button {
+    background-color: #4CAF50; 
+    color: white;             
+    font-size: 16px;          
+    padding: 10px 20px;       
+    border: none;             
+    border-radius: 5px;       
+    cursor: pointer;          
+    transition: transform 0.3s ease; 
 }
 
-button.查看更多:hover {
-    background-color: #45a049; /* 滑鼠移上去時的顏色 */
-    transform: scale(1.1);     /* 滑鼠移上時放大效果 */
+.info button:hover {
+    background-color: #45a049; 
+    transform: scale(1.1);     
 }
 
 .product {
