@@ -85,7 +85,6 @@
             <button type="submit" class="btn">提交結帳</button>
         </form>
     </div>
-
     <script>
         // 從 localStorage 讀取總金額並顯示
         const totalAmount = localStorage.getItem('totalPrice');  // 從 localStorage 取得總金額
@@ -96,43 +95,10 @@
 
         // 表單提交處理
         document.getElementById('checkoutForm').addEventListener('submit', function(e) {
-            e.preventDefault();  // 防止表單自動提交並刷新頁面
-
-            // 收集表單數據
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const address = document.getElementById('address').value;
-            const payment = document.getElementById('payment').value;
-            const totalPrice = totalAmount;
-
-            // 準備要送到伺服器的資料
-            const orderData = {
-                name: name,
-                phone: phone,
-                address: address,
-                payment: payment,
-                totalPrice: totalPrice
-            };
-
-            // 發送 POST 請求到伺服器
-            fetch('http://localhost:3000/checkout', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(orderData),  // 轉換為 JSON 字符串
-            })
-            .then(response => response.json())  // 解析伺服器回應的 JSON
-            .then(data => {
-                // 顯示結帳成功訊息
-                alert('結帳成功!感謝您的購買');
-                localStorage.removeItem('cart');  // 清空購物車
-                localStorage.removeItem('totalPrice');  // 清空總金額
-            })
-            .catch(error => {
-                console.error('錯誤:', error);
-                alert('結帳時發生錯誤，請稍後再試。');
-            });
+            e.preventDefault();
+            alert('結帳成功!感謝您的購買');
+            localStorage.removeItem('cart');  // 清空購物車
+            localStorage.removeItem('totalPrice');  // 清空總金額
         });
     </script>
 </body>
