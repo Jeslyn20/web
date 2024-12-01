@@ -9,10 +9,10 @@ let cart = [];
 
 
 iconCart.addEventListener('click', () => {
-    body.classList.toggle('showCart');
+    body.classList.toggle('showCart')
 })
 closeCart.addEventListener('click', () => {
-    body.classList.toggle('showCart');
+    body.classList.toggle('showCart')
 })
 
     const addDataToHTML = () => {
