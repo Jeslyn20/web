@@ -96,7 +96,7 @@
         // 表單提交處理
         document.getElementById('checkoutForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('結帳成功!感謝您的購買');
+            alert('結帳成功!我們已收到您的訂單，感謝您的購買');
             localStorage.removeItem('cart');  // 清空購物車
             localStorage.removeItem('totalPrice');  // 清空總金額
         });
