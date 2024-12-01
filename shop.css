@@ -37,18 +37,19 @@ header.icon-cart {
 
 /* 設定購物車數量圓圈的樣式 */
 header.icon-cart span {
-    display: flex;
-    width: 30px; 
-    height: 30px;
-    background-color: #ff9900;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    right: -20px;
+    display: flex;               
+    width: 30px;                 
+    height: 30px;                
+    background-color: #ff9900;   
+    justify-content: center;     
+    align-items: center;         
+    color: #fff;                 
+    border-radius: 50%;          
+    position: absolute;          
+    top: 50%;                    
+    right: -20px;                
 }
+
 .title{
     font-size: xx-large;
 }
