@@ -3,17 +3,17 @@
 
 /* 設定 body 的字型 */
 body {
-    font-family: "LXGW WenKai TC", "Protest Revolution", cursive;
+    font-family: "LXGW WenKai  TC", "Protest Revolution", cursive;
     margin: 0;
 }
 
 /* 設定容器寬度和排版 */
 .container {
-    width: 900px; /* 修正拼寫錯誤 */
+    width: 900px; 
     max-width: 90vw;
-    margin: auto; /* 修正拼寫錯誤 */
+    margin: auto; 
     text-align: center;
-    padding: 10px;
+    padding-top: 10px;
 }
 
 /* SVG 圖示的寬度 */
@@ -51,7 +51,7 @@ header .icon-cart span {
 
 .listProduct .item img{
     width: 90%;
-    filter: drop-shadow(0 50px 20px #FFC0CB)
+    filter: drop-shadow(0 50px 20px #fff)
 }
 /* 產品列表的樣式 */
 .listProduct {
@@ -91,10 +91,10 @@ header .icon-cart span {
 }
 .cartTab{
     width: 400px;
-    backgroung-color: #353432
+    backgroung-color: #353432;
     color: #eee;
     position: fixed;
-    inset: 0 0 0 auto;
+    inset: 0 -400px 0 auto;
     display: grid;
     grid-template-rows: 70px 1fr 70px;
 }
@@ -135,4 +135,17 @@ header .icon-cart span {
     color: #555;
     border-radius: 50%;
     cursor: pointer;
+}
+.listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+}
+.listCart .item:nth-child(even){
+    background-color: #eee1;
+}
+.listCart{
+    overflow: auto;
+}
+.listCart::-webkit-scrollbar{
+    width: 0;
 }
