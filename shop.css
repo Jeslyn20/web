@@ -40,7 +40,7 @@ header.icon-cart span {
     display: flex;
     width: 30px; 
     height: 30px;
-    background-color: red;
+    background-color: #ff9900;
     justify-content: center;
     align-items: center;
     color: #fff;
@@ -54,13 +54,13 @@ header.icon-cart span {
 }
 .listProduct .item img{
     width: 90%;
-    filter: drop-shadow(0 50px 20px #fff)
+    filter: drop-shadow(0 -50px 20px #fff)
 }
 /* 產品列表的樣式 */
 .listProduct {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 /* 每個產品項目的樣式 */
@@ -84,7 +84,7 @@ header.icon-cart span {
 
 /* 按鈕的樣式 */
 .listProduct .item button {
-    background-color: rgba(38, 38, 250, 0.8);
+    background-color: #FF95CA;
     color: #eee;
     padding: 5px 10px;
     border-radius: 20px;
@@ -94,7 +94,7 @@ header.icon-cart span {
 }
 .cartTab{
     width: 400px;
-    background-color: #353432;
+    background-color: #81C0C0;
     color: #eee;
     position: fixed;
     inset: 0 -400px 0 auto;
@@ -118,10 +118,10 @@ body.showCart .container{
     grid-template-columns: repeat(2, 1fr);
 }
 .cartTab .btn button{
-    background-color: #E8BC0E;
+    background-color: #FFC1E0;
     border: none;
-    font-family: LXGW WenKai  TC;
-    font-weight: 500;
+    font-family: Protest Revolution;
+    font-weight: 400;
     cursor: pointer;
 }
 .cartTab .btn .close{
