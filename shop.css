@@ -31,12 +31,12 @@ header {
 }
 
 /* 購物車圖示的樣式 */
-.icon-cart {
+header.icon-cart {
     position: relative;
 }
 
 /* 設定購物車數量圓圈的樣式 */
-.icon-cart span {
+header.icon-cart span {
     display: flex;
     width: 30px; 
     height: 30px;
