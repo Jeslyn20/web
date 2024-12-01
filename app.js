@@ -1,3 +1,4 @@
+
 let listProductHTML = document.querySelector('.listProduct');
 let listCartHTML = document.querySelector('.listCart');
 let iconCart = document.querySelector('.icon-cart');
@@ -14,7 +15,6 @@ closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
 });
 
-// 添加產品資料到HTML
 const addDataToHTML = () => {
     // 清空原本的產品列表
     listProductHTML.innerHTML = '';
@@ -28,14 +28,13 @@ const addDataToHTML = () => {
             newProduct.innerHTML = `
                 <img src="${product.image}" alt="">
                 <h2>${product.name}</h2>
-                <div class="price">NT$${product.price}</div>
+                <div class="price">$${product.price}</div>
                 <button class="addCart">Add To Cart</button>`;
             listProductHTML.appendChild(newProduct);
         });
     }
 };
 
-// 監聽產品列表點擊事件，添加產品到購物車
 listProductHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
     if (positionClick.classList.contains('addCart')) {
@@ -44,7 +43,6 @@ listProductHTML.addEventListener('click', (event) => {
     }
 });
 
-// 添加商品到購物車
 const addToCart = (product_id) => {
     let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
 
@@ -61,16 +59,13 @@ const addToCart = (product_id) => {
     addCartToMemory();
 };
 
-// 儲存購物車到 localStorage
 const addCartToMemory = () => {
     localStorage.setItem('cart', JSON.stringify(cart));
 };
 
-// 更新購物車HTML
 const addCartToHTML = () => {
     listCartHTML.innerHTML = '';
     let totalQuantity = 0;
-    let totalPrice = 0;
 
     if (cart.length > 0) {
         cart.forEach(item => {
@@ -88,31 +83,21 @@ const addCartToHTML = () => {
                     <img src="${info.image}" alt="">
                 </div>
                 <div class="name">${info.name}</div>
-                <div class="totalPrice">NT$${info.price * item.quantity}</div>
+                <div class="totalPrice">$${info.price * item.quantity}</div>
                 <div class="quantity">
                     <span class="minus"><</span>
                     <span>${item.quantity}</span>
                     <span class="plus">></span>
                 </div>
             `;
-            listCartHTML.appendChild(newItem);
 
-            // 計算總金額
-            totalPrice += info.price * item.quantity;
+            listCartHTML.appendChild(newItem);
         });
     }
 
-    // 更新購物車數量和總金額
     iconCartSpan.innerText = totalQuantity;
-
-    // 顯示總金額
-    let totalAmountElement = document.createElement('div');
-    totalAmountElement.classList.add('totalAmount');
-    totalAmountElement.innerHTML = `Total: NT$${totalPrice}`;
-    listCartHTML.appendChild(totalAmountElement);
 };
 
-// 監聽購物車點擊事件，修改商品數量
 listCartHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
     if (positionClick.classList.contains('minus') || positionClick.classList.contains('plus')) {
@@ -122,7 +107,6 @@ listCartHTML.addEventListener('click', (event) => {
     }
 });
 
-// 改變購物車中商品的數量
 const changeQuantityCart = (product_id, type) => {
     let positionItemInCart = cart.findIndex((value) => value.product_id == product_id);
 
@@ -146,7 +130,6 @@ const changeQuantityCart = (product_id, type) => {
     addCartToMemory();
 };
 
-// 初始化應用
 const initApp = () => {
     // 取得產品資料
     fetch('products.json')
@@ -164,5 +147,4 @@ const initApp = () => {
         .catch(error => console.error('Error fetching products:', error)); // 捕捉並顯示錯誤
 };
 
-// 初始化應用
 initApp();
