@@ -29,5 +29,10 @@
         "price": 360,
         "image": "images/p5.png"
     }
-
+ {
+        "id": 6,
+        "name":"多巴胺風無袖上衣",
+        "price": 350,
+        "image": "images/p6.png"
+    }
 ]
